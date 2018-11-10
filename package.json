@@ -1,0 +1,23 @@
+{
+  "name": "pdf-nodejs",
+  "version": "1.0.0",
+  "description": "I use puppetier to create a browser, and then render it into a pdf file.",
+  "main": "index.js",
+  "dependencies": {
+    "puppeteer": "^1.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soleypasban/nodejs-render-pdf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soleypasban/nodejs-render-pdf/issues"
+  },
+  "homepage": "https://github.com/soleypasban/nodejs-render-pdf#readme"
+}
