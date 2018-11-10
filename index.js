@@ -1,8 +1,8 @@
 const pup = require('puppeteer')
 
-try {
 
-    const createPDF = async (html, pdfPath, format) => {
+const createPDF = async (html, pdfPath, format) => {
+    try {
         const browser = await pup.launch()
         const page = await browser.newPage()
 
@@ -22,21 +22,19 @@ try {
             printBackground: true
         })
 
-        console.log('done')
         await browser.close()
-        console.log('exit')
-        process.exit()
+        console.log('done')
+
+        return true
+    } catch (e) {
+        console.log(e)
+        return false
     }
-
-
-    createPDF(`
-    <center>
-        <h1>This is a cat!</h1>
-        <img style="width:500px;" src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
-    </center>
-    `)
-
-} catch (e) {
-    console.log(e)
 }
 
+createPDF(`
+        <center>
+            <h1>This is a cat!</h1>
+            <img style="width:500px;" src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+        </center>
+    `)
