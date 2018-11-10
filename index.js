@@ -11,10 +11,10 @@ const createPDF = async (html, pdfPath, format) => {
         await page.evaluate(() => window.scrollBy(0, window.innerHeight))
 
         // render it as jpeg
-        // await page.screenshot({
-        //     path: 'sample.jpg',
-        //     fullPage: true
-        // });
+        await page.screenshot({
+            path: 'sample.jpg',
+            fullPage: true
+        });
 
         await page.pdf({
             path: pdfPath || 'sample.pdf',
